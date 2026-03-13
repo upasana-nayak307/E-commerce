@@ -1,0 +1,340 @@
+/* ===============================
+   CART WRAPPER
+================================= */
+
+.cartWrapper {
+  width: 100%;
+  padding: 40px 20px;
+  border-radius: 12px;
+  background:  rgba(26, 26, 26, 0.8);
+  padding:120px 40px 40px 40px;
+  /* min-height: 100vh; */
+}
+
+.cartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   CART HEADER
+================================= */
+
+.cartHeader {
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.pageTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.headerSubtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+   CART CONTENT
+================================= */
+
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===============================
+   CART ITEM
+================================= */
+
+.cartItem {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 100px 1fr 120px 120px 50px;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.cartItem:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.itemImage {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.1));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   ITEM DETAILS
+================================= */
+
+.itemDetails h3 {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.itemDetails p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+   ITEM PRICE
+================================= */
+
+.itemPrice {
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.itemPriceValue {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.itemPriceLabel {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+/* ===============================
+   QUANTITY SELECTOR
+================================= */
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.qtyBtn {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.qtyBtn:hover {
+  color: white;
+}
+
+.qtyDisplay {
+  width: 48px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ===============================
+   REMOVE BUTTON
+================================= */
+
+.removeBtn {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.removeBtn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+/* ===============================
+   ORDER SUMMARY
+================================= */
+
+.orderSummary {
+  background: rgba(255, 255, 255, 0.05);
+  font-family: 'Montserrat', sans-serif;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  height: fit-content;
+  position: sticky;
+  top: 40px;
+  animation: slideInUp 0.8s ease-out 0.3s both;
+}
+
+.summaryTitle {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+.summaryLabel,
+.summaryValue,
+.totalLabel,
+.totalValue {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.checkoutBtn {
+  width: 100%;
+  padding: 15px;
+  background-color: #5048E5;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.checkoutBtn:hover {
+  transform: translateY(-3px);
+}
+
+.continueLink {
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.continueLink:hover {
+  color: white;
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1024px) {
+  .cartContent {
+    grid-template-columns: 1fr;
+  }
+
+  .orderSummary {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartWrapper {
+    padding: 24px 16px;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+  }
+
+  .cartItem {
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .itemImage {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .itemPrice,
+  .quantitySelector,
+  .removeBtn {
+    display: none;
+  }
+
+  .itemDetails h3 {
+    font-size: 14px;
+  }
+
+  .itemDetails p {
+    font-size: 12px;
+  }
+}

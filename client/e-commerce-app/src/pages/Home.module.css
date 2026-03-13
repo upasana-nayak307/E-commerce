@@ -1,0 +1,172 @@
+/* Home.module.css */
+
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+ margin-top: 100px;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #1a1a1a, rgba(26, 26, 26, 0.8), transparent);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.heroText {
+  max-width: 600px;
+}
+
+.heroSubtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #4941f4 !important; 
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.05;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gradientText {
+  color: #4F3FB2;
+}
+
+.heroDescription {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.heroBtn {
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.primaryBtn {
+  background-color: #5048E5;
+  color: #fff;
+}
+
+.primaryBtn:hover {
+  background-color: #3b36c3;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(80, 72, 229, 0.3);
+}
+
+.outlineBtn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid whitesmoke;
+}
+
+.outlineBtn:hover {
+  color: #5048E5;
+  border: 1px solid #5048E5;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(80, 72, 229, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateFadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animateFadeInUpDelay1 {
+  animation: fadeInUp 0.8s 0.3s ease forwards;
+}
+
+.animateFadeInUpDelay2 {
+  animation: fadeInUp 0.8s 0.6s ease forwards;
+}
+
+.animateFadeInUpDelay3 {
+  animation: fadeInUp 0.8s 0.9s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .heroBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroContent {
+    padding: 2rem 1rem;
+  }
+}
