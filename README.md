@@ -39,6 +39,8 @@ A full-stack e-commerce application built with **MERN stack**. Users can browse 
 ---
 
 ## 📂 Project Structure
+
+```
 E-commerce
 client/
 │
@@ -130,6 +132,7 @@ server/
 ├── package.json
 ├── package-lock.json
 └── server.js
+```
 
 
 ---
